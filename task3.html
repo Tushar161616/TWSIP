@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!
+    </title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico" />
+    <!--stylesheet-->
+    <link rel="stylesheet" href="style.css" />
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            *{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+form{
+    width: 100%;
+}
+main{
+    padding-bottom: 50px;
+    background-color: #f1f3f6;
+    padding: 10px 10px;
+}
+header{
+    background-color: #2874f0;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    width: 70px;
+    position: relative;
+    top:2px;
+}
+.logo img{
+    width: 100%;
+}
+.explore{
+    width: 80px;
+    display: flex;
+    white-space: nowrap;
+    display: flex;
+    /* justify-content: center; */
+    align-content: flex-start;
+    height: 100%;
+    position: relative;
+    top:-2px;
+}
+.explore a{
+    display: flex;
+    color: white;
+}
+.explore a:hover{
+    text-decoration: underline;
+}
+.explore p{
+    margin:0;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 550;
+    color:white;
+    
+}
+.explore img{
+    width: 10px;
+    height: 10px;
+    margin: 0;
+}
+.plus-icon{
+    color:#ffe500;
+    
+}
+
+/******search_container******/
+.search_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 500px;
+    min-width: 300px;
+    width: 400px;
+    height: 32px;
+    margin:0px 10px;
+    background-color: white;
+    border-radius: 1px;
+    padding: 0px 15px;
+    box-shadow: -5px -5px 5px rgba(0,0,0,0.1),
+    5px 5px 5px rgba(0,0,0,0.1);
+    position: relative;
+}
+.search_container i{
+    color:#2874f0;
+}
+.search_container input{
+    width: 100%;
+    font-size: 15px;
+    border:none;
+    outline: none;
+}
+.recent_Search{
+    position: absolute;
+    background-color: white;
+    box-shadow: -5px -0px 5px rgba(0,0,0,0.1),
+    5px 5px 5px rgba(0,0,0,0.1);
+    height: 400px;
+    width: 100%;
+    top: 32px;  /*****change done****/
+    margin-left: -15px;
+    border-top: 1px solid #ccc;
+    display: none;
+    padding:15px;
+    z-index:12;   /*** change done****/
+}
+.search_container:focus-within .recent_Search{
+    display: block;
+}
+.recent_list{
+    display: flex;
+    padding: 5px 0px;
+}
+.recent_list i{
+    color:#7a7a7a;
+    font-size: 14px;
+}
+.recent_list p{
+    padding-left: 20px;
+    font-size: 15px;
+}
+/*******loginBtn_container**********/
+.loginBtn_container{
+    background-color: white;
+    padding: 6px 35px;
+    font-size: 15px;
+    border-radius: 1px;
+    margin:0px 10px;
+    position: relative;
+}
+.loginBtn_container a{
+    color: #2874f0;
+    font-weight: 550;
+    text-decoration: none;
+}
+.login_menu{
+    position: absolute;
+    top:34px;
+    height: 320px;
+    width: 100%;
+    width: 230px;
+    background-color: transparent;
+    margin-left: -40px;
+    transform: translateX(-25%);
+    display: none;
+    padding-top: 15px;
+    z-index:12; /*** change done****/
+}
+.login_menu::before{
+    position: absolute;
+    content: "";
+    margin-left: 110px;
+    top:1px;
+    border-top:0px solid transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid white;
+}
+.loginBtn_container:hover .login_menu{
+    display: block;
+}
+.login_menu_list{
+    height: 100%;
+    max-width: 100%;
+    background-color: white;
+    box-shadow: -5px -0px 5px rgba(0,0,0,0.1),
+    5px 5px 5px rgba(0,0,0,0.1);
+    padding: 5px 20px;
+    font-size: 15px;
+    
+}
+.login_menu_top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.login_menu_top a:hover{
+    text-decoration: underline;
+}
+.menu_nav_link{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+}
+.menu_nav_link a{
+    padding-top: 10px;
+    font-size: 14px;
+    display: flex;
+}
+.menu_nav_link a p{
+    padding-left: 10px;
+    color:#474545;
+    font-weight: 500;
+}
+.menu_nav_icon{
+    width: 15px;
+}
+
+
+
+
+
+/******become a seller***/
+.nav-link{
+    color:white;
+    padding:0px 15px;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 550;
+    margin: 0 5px;
+
+
+}
+
+/***more ****/
+.more_link{
+    font-weight: 550;
+    padding:0px 15px;
+    font-size: 15px;
+    color:white;
+    cursor: pointer;
+    margin: 0 10px;
+    position: relative;
+}
+.icon_more{
+    font-size: 10px;
+    transition: transform 0.5s;
+}
+.more_link:hover .icon_more{
+    transform: rotate(-180deg);
+}
+.more_menu{
+    position: absolute;
+    height:220px;
+    width:200px;
+    content: "";
+    background-color: transparent;
+    transform: translateX(-35%);  
+    padding-top:10px;
+    display: none;
+   z-index: 12; /*** change done****/
+    
+}
+.more_link:hover .more_menu{
+    display: block;
+}
+.more_menu::before{
+    position: absolute;
+    content: "";
+    margin-left: 95px;
+    top:1px;
+    border-top:0px solid transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid white; 
+}
+.more_menu_list{
+    background-color: white;
+    height: 100%;
+    box-shadow: -5px -0px 5px rgba(0,0,0,0.1),
+    5px 5px 5px rgba(0,0,0,0.1);
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: red; */
+}
+.more_menu_list a{
+    display: flex;
+    font-size: 14px;
+}
+.more_menu_list i{
+    color: #2874f0;
+}
+.more_menu_list p{
+    color:#474545;
+    padding-left: 10px;
+    white-space: nowrap;
+    font-weight: 500 ;
+}
+
+
+
+.card_link{
+    display: flex;
+    font-size: 15px;
+    font-weight: 550;
+    color:white;
+    margin-left: 10px;
+}
+.card_link p{
+    padding: 0px 5px;
+    
+}
+
+
+
+
+/********************feautre products ***********************************************/
+.featureProducts{
+    height: 103px;
+    /* background-color: red; */
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.15);
+}
+.featureProduct_image{
+    width: 60px;
+}
+.featureProduct_image img{
+    width: 100%;
+}
+.featureProduct_name{
+    font-size: 14px;
+    font-weight: 550;
+    color:#474545
+}
+.featureProduct_icon_more{
+    font-size: 10px;
+}
+.featureProduct_list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+
+/******imageSliderContainer*******/
+.imageSliderContainer{
+    position: relative;
+    height: 280px;
+    background-color: #f1f3f6;
+    padding: 10px 0px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.imageSliderBtn{
+    position: absolute;
+    /* z-index: 10; */
+    width: 99%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.imageSliderBtn button{
+    padding: 30px 12px;
+    background-color: white;
+    border:none;
+    outline: none;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+    font-size: 30px;
+    /* border-radius: 5px; */
+    z-index: 13;
+}
+.imageSliderBtn button:nth-child(odd){
+    border-radius: 0px 3px 3px 0px;
+}
+.imageSliderBtn button:nth-child(even){
+    border-radius: 3px 0px 0px 3px;
+}
+
+
+.imageSliderList{
+    position: absolute;
+    /* top:15px; */
+    z-index: 11;
+    width: 99%;
+    height: 95%;
+    display: flex;
+    overflow: hidden;
+    
+}
+.imageSliderItem{
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* transform: translateX(-400%); */
+    transition: transform 0.5s;
+}
+.imageSliderItem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.3);
+}
+
+
+/*************************bestofElectronic_Contianer**************************************************/
+.bestofElectronic_Contianer{
+    width: 99%;
+    height: 310px;
+    background-color: red;
+}
+.bestofElectronicmoreOption{
+    height: 100px;
+    max-width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+.bestofElectronicmoreOption img{
+    height: 100%;
+    width: 100%;
+}
+.BestofElectronic_item{
+    background-color: white;
+    min-width: 210px;
+    max-width:210px ;
+    height: 310px;
+    position: relative;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+.viewAllBtn{
+    background-color: #2874f0;
+    padding: 6px 16px;
+    border-radius: 3px;
+    color:white;
+    font-size: 15px;
+}
+.bestofElectronic_bigText{
+    font-size: 30px;
+    text-align: center;
+    margin:60px 0px 30px 0px;
+}
+.bestofElectronic_list{
+    display: flex;
+}
+.bestOfElectornic_image_Product{
+    height: max-content;
+    text-align: center;
+    height: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.bestOfElectornic_image_Product img{
+    width: 90%;
+    max-height: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.bestofElectornicProduct_name{
+    font-size: 15px;
+    padding: 5px;
+    letter-spacing: 0.5px;
+}
+.bestofElecronic_discount{
+    color:#388e3c;
+}
+.bestofElectronic_brand{
+    color:rgb(143, 136, 136);
+}
+
+
+.bestofElctronic_product_item{
+    display: flex;
+    overflow: hidden;
+}
+.bestofElectronic_brand{
+    font-size: 12px;
+    padding-top: 7px;
+}
+.bestofElectornicProduct_name{
+    color:#000;
+}
+        </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo_Container">
+            <div class="logo">
+                <img
+                    src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png" />
+            </div>
+            <div class="explore">
+                <a href="https://www.flipkart.com/plus">
+                    <p>Explore <span class="plus-icon">Plus</span></p>
+                    <img
+                        src="https://rukminim1.flixcart.com/fk-p-flap/1600/270/image/4529fd434a85c683.jpg?q=20" />
+                </a>
+            </div>
+        </div>
+
+        <div class="search_container">
+            <form id="search_form">
+                <input type="text" placeholder="Search for products brands and more" id="search_input" />
+            </form>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <!--recent search-->
+            <div class="recent_Search">
+
+            </div>
+        </div>
+
+        <div class="loginBtn_container">
+            <a href="#">Login</a>
+            <div class="login_menu">
+                <div class="login_menu_list">
+                    <div class="login_menu_top">
+                        <p>New Customer?</p>
+                        <a href="#">Sign Up</a>
+                    </div>
+                    <div class="menu_nav_link">
+                        <a
+                            href="https://www.flipkart.com/account/login?ret=%2Faccount%2F%3Frd%3D0%26link%3Dhome_account">
+                            <i class="fa-solid fa-circle-user"></i>
+                            <p>My Profile</p>
+                        </a>
+                        <a href="#">
+                            <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/logo_lite-cbb357.png" class="menu_nav_icon" />
+                            <p>Flipkart plus zone</p>
+                        </a>
+                        <a href="#">
+                            <img src="https://rukminim1.flixcart.com/fk-p-flap/1600/270/image/4529fd434a85c683.jpg?q=80 1x" class="menu_nav_icon" />
+                            <p>Order</p>
+                        </a>
+                        <a href="#">
+                            <img src="./icon/wishlistIcon.svg" class="menu_nav_icon" />
+                            <p>Wishlist</p>
+                        </a>
+                        <a href="#">
+                            <img src="./icon/rewardIcon.svg" class="menu_nav_icon" />
+                            <p>Rewards</p>
+                        </a>
+                        <a href="#">
+                            <img src="./icon/giftIcon.svg" class="menu_nav_icon" />
+                            <p>Gift Cards</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a class="nav-link"
+            href="https://seller.flipkart.com/sell-online/?utm_source=fkwebsite&utm_medium=websitedirect">
+            Become a Seller
+        </a>
+
+        <div class="more_link">
+            More
+            <i class="fa-solid fa-angle-down icon_more"></i>
+            <div class="more_menu">
+                <div class="more_menu_list">
+
+                    <a href="https://www.flipkart.com/communication-preferences/push?t=all">
+                        <img src="./icon/notificationIcon.svg" class="menu_nav_icon" />
+                        <p>Notification Preferences</p>
+                    </a>
+                    <a href="https://www.flipkart.com/helpcentre">
+                        <img src="./icon/customerIcon.svg" class="menu_nav_icon" />
+                        <p>24 X 7 Customer Care</p>
+                    </a>
+                    <a href="https://advertising.flipkart.com/login?returl=/?otracker=ch_vn_advertise_header">
+                        <img src="./icon/advertiseIcon.svg" class="menu_nav_icon" />
+                        <p>Advertise</p>
+                    </a>
+                    <a href="https://www.flipkart.com/mobile-apps?otracker=ch_vn_mobile_apps">
+                        <img src="C:\Users\user\OneDrive\Documents\web devlopment\TWInternship\Task3\download_FILL0_wght400_GRAD0_opsz24.svg" class="menu_nav_icon" />
+                        <p>Download App</p>
+                    </a>
+
+
+                </div>
+            </div>
+        </div>
+
+        <a href="https://www.flipkart.com/viewcart?exploreMode=true&preference=FLIPKART">
+            <div class="card_link">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p>Cart</p>
+            </div>
+        </a>
+
+    </header>
+
+
+    <main>
+    </main>
+    <!--<div class="featureProducts">
+            <div class="featureProduct_list">
+
+            </div>
+        </div>-->
+
+        <!--image slider
+
+       <div class="imageSliderContainer">
+            <div class="imageSliderBtn">
+                <button id="preve_imageBtn">
+                    <i class="fa-solid fa-angle-left"></i>
+                </button>
+                <button id="next_imageBtn">
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
+            </div>
+
+            <div class="imageSliderList">
+            </div>
+        </div> -->
+        <img src="https://assets.mspimages.in/wp-content/uploads/2021/10/Flipkart-Big-billion-days-2021-featured-image-1.jpeg" height="432px" width="1903px" />
+        <!--Best of electronic-->
+        <div class="bestofElectronic_Contianer"> 
+            <div class="bestofElectronic_list">
+                <div class="BestofElectronic_item">
+                    <div class="bestofElectronic_bigText">Best of Electronics</div>
+                    <a href="https://www.flipkart.com/offers-list/content?screen=dynamic&pk=themeViews%3DDT-OMU-1%3ADealcard~widgetType%3DdealCard~contentType%3Dneo&wid=2.dealCard.OMU&wid=3.dealCard.OMU_3&otracker=hp_omu_Best%2Bof%2BElectronics_3&otracker1=hp_omu_PINNED_neo%2Fmerchandising_Best%2Bof%2BElectronics_NA_wc_view-all_3"
+                        class="viewAllBtn">View All</a>
+                    <div class="bestofElectronicmoreOption">
+                        
+                        <img src="https://rukminim1.flixcart.com/fk-p-flap/278/278/image/7593e7b6640822c1.jpg?q=90" />
+                    </div>
+                </div>
+<img src = "data:image/jpeg;base64,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" height="310px" width="1700px"/>
+                <div class="bestofElctronic_product_item">
+                   
+                </div>
+                    
+
+            </div>
+        </div>
+    </main>
+
+    <img scr = "https://static.javatpoint.com/tutorial/bootstrap4/images/bootstrap-4-footer.png" height="100px" width="1900px" />
+
+
+
+    <script src="javascript.js" type="module">
+    export const imageSlider = [
+    {
+        img : "https://s3b.cashify.in/gpro/uploads/2022/09/06192427/flipkart-big-billion-days-sale-163393658216x9-1.jpg",
+        link : "https://www.flipkart.com/infinix-hot-20-play-aurora-green-64-gb/p/itm1e6903eb0203e?pid=MOBGK23WWFC8SUZZ&param=59886&otracker=hp_bannerads_1_2.bannerAdCard.BANNERADS_20%2BPlay_HUD5YVEMPWIO"
+    },
+    {
+        img : "https://rukminim1.flixcart.com/fk-p-flap/1600/270/image/0819129bd1a3c342.jpg?q=20",
+        link : "https://www.flipkart.com/6bo/b5g/~cs-ionqlb5ght/pr?sid=6bo%2Cb5g&collection-tab-name=Apple+MacBook&otracker=hp_bannerads_2_2.bannerAdCard.BANNERADS_Alt_44UZJMJ94YR3"
+    },
+    {
+        img : "https://rukminim1.flixcart.com/fk-p-flap/1600/270/image/0819129bd1a3c342.jpg?q=20",
+        link : "https://www.flipkart.com/infinix-hot-20-5g-space-blue-64-gb/p/itm6646cdd2ff265?pid=MOBGK23W5QZQGSZW&param=547875&otracker=hp_bannerads_3_2.bannerAdCard.BANNERADS_Cat_Mob_HPW_Infinix%2BHot%2B20%2B5G_VHN6I1MV48BP"
+    },
+    {
+        img : "https://rukminim1.flixcart.com/fk-p-flap/1600/270/image/0819129bd1a3c342.jpg?q=20",
+        link : "https://www.flipkart.com/travel/flights?param=FKDTHPWNOV22zerofeenmnvndghkskjsjbjn&otracker=hp_bannerads_4_2.bannerAdCard.BANNERADS_1_LLSGOIN663NS"
+    },
+    {
+        img : "https://rukminim1.flixcart.com/fk-p-flap/1600/270/image/0819129bd1a3c342.jpg?q=20",
+        link : "https://www.flipkart.com/furniture-india-ka-furniture-store?otracker=hp_bannerads_5_2.bannerAdCard.BANNERADS_Furniture%2BBestsellers_ASPFJEKJRE57"
+    }
+]
+export const featureProductNav = [
+    {
+        id : "featureProductNav_1",
+        img : "https://s3b.cashify.in/gpro/uploads/2022/09/06192427/flipkart-big-billion-days-sale-163393658216x9-1.jpg",
+        name : "Grocery",
+        link : "https://www.flipkart.com/grocery-supermart-store?marketplace=GROCERY&fm=neo%2Fmerchandising&iid=M_df7c9813-6856-40b3-a820-872953ef1dc3_1_372UD5BXDFYS_MC.CBUR1Q46W5F1&otracker=hp_rich_navigation_1_1.navigationCard.RICH_NAVIGATION_Grocery_CBUR1Q46W5F1&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_1_L0_view-all&cid=CBUR1Q46W5F1",
+        subNavigation : false,
+    },
+    {
+        id : "featureProductNav_2",
+        img : "https://s3b.cashify.in/gpro/uploads/2022/09/06192427/flipkart-big-billion-days-sale-163393658216x9-1.jpg",
+        name : "Mobiles",
+        link : "https://www.flipkart.com/mobile-phones-store?fm=neo%2Fmerchandising&iid=M_90683437-bbb5-4970-9deb-983c2ad5430c_1_372UD5BXDFYS_MC.ZRQ4DKH28K8J&otracker=hp_rich_navigation_2_1.navigationCard.RICH_NAVIGATION_Mobiles_ZRQ4DKH28K8J&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_2_L0_view-all&cid=ZRQ4DKH28K8J",
+        subNavigation : false,
+    },
+    {
+        id : "featureProductNav_3",
+        img : "https://s3b.cashify.in/gpro/uploads/2022/09/06192427/flipkart-big-billion-days-sale-163393658216x9-1.jpg",
+        name : "Fashion",
+        link : "https://www.flipkart.com/clothing-and-accessories/topwear/pr?sid=clo,ash&p[]=facets.ideal_for%255B%255D%3DMen&p[]=facets.ideal_for%255B%255D%3Dmen&otracker=categorytree&fm=neo%2Fmerchandising&iid=M_e7e89a41-1604-4a86-82b2-25b9cbf0314d_1_372UD5BXDFYS_MC.6XNZG1FYFBZT&otracker=hp_rich_navigation_1_1.navigationCard.RICH_NAVIGATION_Fashion~Men%2527s%2BTop%2BWear_6XNZG1FYFBZT&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_1_L1_view-all&cid=6XNZG1FYFBZT",
+        subNavigation : true,
+    },
+    {
+        id : "featureProductNav_4",
+        img : "https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100",
+        name : "Electronics",
+        link : "https://www.flipkart.com/electronics-best-offers-store?fm=neo%2Fmerchandising&iid=M_a65b046f-c76c-40bd-a073-6b7b87c18e3e_1_372UD5BXDFYS_MC.KV8NA7Z3WYHI&otracker=hp_rich_navigation_1_1.navigationCard.RICH_NAVIGATION_Electronics~Audio_KV8NA7Z3WYHI&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_1_L1_view-all&cid=KV8NA7Z3WYHI",
+        subNavigation : true,
+    },
+    {
+        id : "featureProductNav_5",
+        img : "https://rukminim1.flixcart.com/flap/128/128/image/ab7e2b022a4587dd.jpg?q=100",
+        name : "Home",
+        link : "https://www.flipkart.com/india-ka-furniture-studio-store?fm=neo%2Fmerchandising&iid=M_05e8f62c-d606-45d2-8148-ed76b4bdf856_1_372UD5BXDFYS_MC.Q6I8NGK1VUG9&otracker=hp_rich_navigation_1_1.navigationCard.RICH_NAVIGATION_Home~Home%2BFurnishings_Q6I8NGK1VUG9&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_1_L1_view-all&cid=Q6I8NGK1VUG9",
+        subNavigation : true,
+    },
+    {
+        id : "featureProductNav_6",
+        img : "https://rukminim1.flixcart.com/flap/128/128/image/0ff199d1bd27eb98.png?q=100",
+        name : "Appliances",
+        link : "https://www.flipkart.com/tvs-and-appliances-new-clp-store?fm=neo%2Fmerchandising&iid=M_b4922e5a-e63d-43a1-8a7f-2928d6df9f0b_1_372UD5BXDFYS_MC.LO4IWVHA61BX&otracker=hp_rich_navigation_6_1.navigationCard.RICH_NAVIGATION_Appliances_LO4IWVHA61BX&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_6_L0_view-all&cid=LO4IWVHA61BX",
+        subNavigation : true,
+    },
+    {
+        id : "featureProductNav_7",
+        img : "https://rukminim1.flixcart.com/flap/128/128/image/71050627a56b4693.png?q=100",
+        name : "Travel",
+        link : "https://www.flipkart.com/travel/flights?param=DTNavIcon&fm=neo%2Fmerchandising&iid=M_3677754d-7298-46a3-b901-a45f7ab46546_1_372UD5BXDFYS_MC.V4ZPKTOAO321&otracker=hp_rich_navigation_7_1.navigationCard.RICH_NAVIGATION_Travel_V4ZPKTOAO321&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_7_L0_view-all&cid=V4ZPKTOAO321",
+        subNavigation : false,
+    },
+    {
+        id : "featureProductNav_8",
+        img : "https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100",
+        name : "Top Offers",
+        link : "https://www.flipkart.com/offers-store?otracker=nmenu_offer-zone&fm=neo%2Fmerchandising&iid=M_99ff7e34-3d6a-48d3-901f-865610479edf_1_372UD5BXDFYS_MC.G6ZC4RAJ9OHU&otracker=hp_rich_navigation_8_1.navigationCard.RICH_NAVIGATION_Top%2BOffers_G6ZC4RAJ9OHU&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_8_L0_view-all&cid=G6ZC4RAJ9OHU",
+        subNavigation : false,
+    },
+    {
+        id : "featureProductNav_9",
+        img : "https://rukminim1.flixcart.com/flap/128/128/image/dff3f7adcf3a90c6.png?q=100",
+        name : "Beauty, Toys & More",
+        link : "https://www.flipkart.com/beauty-and-grooming/pr?sid=g9b&otracker=categorytree&p%5B%5D=facets.fulfilled_by%255B%255D%3DFlipkart%2BAssured&fm=neo%2Fmerchandising&iid=M_f411cf05-c5f1-44f7-b913-84a3fb954158_1_372UD5BXDFYS_MC.RXB0XORLSZ1I&otracker=hp_rich_navigation_1_1.navigationCard.RICH_NAVIGATION_Beauty%252C%2BToys%2B%2526%2BMore~Beauty%2B%2526%2BPersonal%2BCare_RXB0XORLSZ1I&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_1_L1_view-all&cid=RXB0XORLSZ1I",
+        subNavigation : true,
+    },
+    {
+        id : "featureProductNav_9",
+        img : "https://rukminim1.flixcart.com/fk-p-flap/128/128/image/05d708653beff580.png?q=100",
+        name : "2-Wheelers",
+        link : "https://www.flipkart.com/two-wheelers-store?fm=neo%2Fmerchandising&iid=M_524d24c3-13fe-447a-9ac2-9e313c164693_1_372UD5BXDFYS_MC.SCJPZ04TFJJM&otracker=hp_rich_navigation_1_1.navigationCard.RICH_NAVIGATION_2-Wheelers~Petrol%2BVehicles_SCJPZ04TFJJM&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_1_L1_view-all&cid=SCJPZ04TFJJM",
+        subNavigation : true,
+    }
+]
+export const electronicsProductData = [
+    {
+        img : "https://rukminim1.flixcart.com/image/200/200/kmp7ngw0/monitor/j/z/h/s2721hn-27-py0df-dell-original-imagfjphuywuh2a7.jpeg?q=70",
+        productName : "Monitor",
+        discount : "From ₹8279",
+        brand : "DELL",
+        link : "https://www.flipkart.com/computers/computer-components/monitors/pr?sid=6bo%2Cg0i%2C9no&fm[]=neo%2Fmerchandising&fm[]=neo%2Fmerchandising&iid[]=M_ce1a6f68-d7d2-4ae1-875c-0d0877d9a11f_2_372UD5BXDFYS_MC.ECL5SFI77NSY&iid[]=M_6ad97ab4-df02-4176-9721-2e6fea12352c_3.BK9ZVR1JH3RT&otracker1[]=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_3_L2_view-all&otracker1[]=hp_omu_PINNED_neo%2Fmerchandising_Best%2Bof%2BElectronics_NA_dealCard_cc_1_NA_view-all_3&cid[]=ECL5SFI77NSY&cid[]=BK9ZVR1JH3RT&p[]=facets.fulfilled_by%255B%255D%3DFlipkart%2BAssured&p[]=facets.brand%255B%255D%3DDELL&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InZhbHVlQ2FsbG91dCI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ2YWx1ZUNhbGxvdXQiLCJpbmZlcmVuY2VUeXBlIjoiVkFMVUVfQ0FMTE9VVCIsInZhbHVlcyI6WyJGcm9tIOKCuTgyNzkiXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19LCJ0aXRsZSI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ0aXRsZSIsImluZmVyZW5jZVR5cGUiOiJUSVRMRSIsInZhbHVlcyI6WyJNb25pdG9yIl0sInZhbHVlVHlwZSI6Ik1VTFRJX1ZBTFVFRCJ9fSwiaGVyb1BpZCI6eyJzaW5nbGVWYWx1ZUF0dHJpYnV0ZSI6eyJrZXkiOiJoZXJvUGlkIiwiaW5mZXJlbmNlVHlwZSI6IlBJRCIsInZhbHVlIjoiTU9OR1lERlFFMkpKSE5GMyIsInZhbHVlVHlwZSI6IlNJTkdMRV9WQUxVRUQifX19fX0%3D&ssid=78n0zyd2gw0000001670247116621&otracker=hp_omu_Best%2Bof%2BElectronics_1_3.dealCard.OMU_BK9ZVR1JH3RT_3"
+    },
+    {
+        img : "https://rukminim1.flixcart.com/image/200/200/l5jxt3k0/dslr-camera/m/n/a/-original-imagg7hsggshhwbz.jpeg?q=70",
+        productName : "Top Mirrorless Cameras",
+        discount : "Shop Now!",
+        brand : "Canon, Sony, Fujifilm...",
+        link : "https://www.flipkart.com/cameras/dslr-mirrorless/pr?sid=jek%2Cp31%2Ctrv&p%5B%5D=facets.fulfilled_by%255B%255D%3DFlipkart%2BAssured&p%5B%5D=facets.type%255B%255D%3DMirrorless&param=179&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InZhbHVlQ2FsbG91dCI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ2YWx1ZUNhbGxvdXQiLCJpbmZlcmVuY2VUeXBlIjoiVkFMVUVfQ0FMTE9VVCIsInZhbHVlcyI6WyJTaG9wIE5vdyEiXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19LCJ0aXRsZSI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ0aXRsZSIsImluZmVyZW5jZVR5cGUiOiJUSVRMRSIsInZhbHVlcyI6WyJUb3AgTWlycm9ybGVzcyBDYW1lcmFzIl0sInZhbHVlVHlwZSI6Ik1VTFRJX1ZBTFVFRCJ9fSwiaGVyb1BpZCI6eyJzaW5nbGVWYWx1ZUF0dHJpYnV0ZSI6eyJrZXkiOiJoZXJvUGlkIiwiaW5mZXJlbmNlVHlwZSI6IlBJRCIsInZhbHVlIjoiRExMRjZRWlBOS1RRTVM4SiIsInZhbHVlVHlwZSI6IlNJTkdMRV9WQUxVRUQifX19fX0%3D&fm=neo%2Fmerchandising&iid=M_6ad97ab4-df02-4176-9721-2e6fea12352c_3.Q5LU1U8PHMK6&ssid=78n0zyd2gw0000001670247116621&otracker=hp_omu_Best%2Bof%2BElectronics_2_3.dealCard.OMU_Q5LU1U8PHMK6_3&otracker1=hp_omu_PINNED_neo%2Fmerchandising_Best%2Bof%2BElectronics_NA_dealCard_cc_2_NA_view-all_3&cid=Q5LU1U8PHMK6"
+    },
+    {
+        img : "https://rukminim1.flixcart.com/image/200/200/printer/j/j/y/hp-laserjet-m1005-multifunction-original-imadxhzpeb9qbrfg.jpeg?q=70",
+        productName : "Printers",
+        discount : "From ₹3999",
+        brand : "HP",
+        link : "https://www.flipkart.com/computers/computer-peripherals/printers-inks/printers/pr?sid=6bo%2Ctia%2Cffn%2Ct64&fm=neo%2Fmerchandising&iid=M_2731d14e-2583-4664-a065-6fc7ea504a6d_2_372UD5BXDFYS_MC.ES1XN5J8PT49&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_2_L2_view-all&cid=ES1XN5J8PT49&p%5B%5D=facets.fulfilled_by%255B%255D%3DFlipkart%2BAssured&p%5B%5D=facets.brand%255B%255D%3DHP&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InZhbHVlQ2FsbG91dCI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ2YWx1ZUNhbGxvdXQiLCJpbmZlcmVuY2VUeXBlIjoiVkFMVUVfQ0FMTE9VVCIsInZhbHVlcyI6WyJGcm9tIOKCuTM5OTkiXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19LCJ0aXRsZSI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ0aXRsZSIsImluZmVyZW5jZVR5cGUiOiJUSVRMRSIsInZhbHVlcyI6WyJQcmludGVycyJdLCJ2YWx1ZVR5cGUiOiJNVUxUSV9WQUxVRUQifX0sImhlcm9QaWQiOnsic2luZ2xlVmFsdWVBdHRyaWJ1dGUiOnsia2V5IjoiaGVyb1BpZCIsImluZmVyZW5jZVR5cGUiOiJQSUQiLCJ2YWx1ZSI6IlBSTkRYSFpFNVI5SFVKSlkiLCJ2YWx1ZVR5cGUiOiJTSU5HTEVfVkFMVUVEIn19fX19&fm=neo%2Fmerchandising&iid=M_6ad97ab4-df02-4176-9721-2e6fea12352c_3.D54DFY00C5JD&ssid=78n0zyd2gw0000001670247116621&otracker=hp_omu_Best%2Bof%2BElectronics_3_3.dealCard.OMU_D54DFY00C5JD_3&otracker1=hp_omu_PINNED_neo%2Fmerchandising_Best%2Bof%2BElectronics_NA_dealCard_cc_3_NA_view-all_3&cid=D54DFY00C5JD"
+    },
+    {
+        img : "https://rukminim1.flixcart.com/image/200/200/kmp7ngw0/monitor/j/z/h/s2721hn-27-py0df-dell-original-imagfjphuywuh2a7.jpeg?q=70",
+        productName : "Monitor",
+        discount : "From ₹8279",
+        brand : "DELL",
+        link : "https://www.flipkart.com/jek/~cs-w77jvamsdn/pr?sid=jek&collection-tab-name=Only+Camera+Accessories&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InZhbHVlQ2FsbG91dCI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ2YWx1ZUNhbGxvdXQiLCJpbmZlcmVuY2VUeXBlIjoiVkFMVUVfQ0FMTE9VVCIsInZhbHVlcyI6WyJTaG9wIE5vdyEiXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19LCJ0aXRsZSI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ0aXRsZSIsImluZmVyZW5jZVR5cGUiOiJUSVRMRSIsInZhbHVlcyI6WyJUb3AgRGVhbHMgb2YgQ2FtZXJhIEFjY2Vzc29yaWVzIl0sInZhbHVlVHlwZSI6Ik1VTFRJX1ZBTFVFRCJ9fSwiaGVyb1BpZCI6eyJzaW5nbGVWYWx1ZUF0dHJpYnV0ZSI6eyJrZXkiOiJoZXJvUGlkIiwiaW5mZXJlbmNlVHlwZSI6IlBJRCIsInZhbHVlIjoiR0lNRzVRR1pNWTRBWERKRyIsInZhbHVlVHlwZSI6IlNJTkdMRV9WQUxVRUQifX19fX0%3D&fm=neo%2Fmerchandising&iid=M_6ad97ab4-df02-4176-9721-2e6fea12352c_3.YDDB3BMWGV3J&ssid=78n0zyd2gw0000001670247116621&otracker=hp_omu_Best%2Bof%2BElectronics_4_3.dealCard.OMU_YDDB3BMWGV3J_3&otracker1=hp_omu_PINNED_neo%2Fmerchandising_Best%2Bof%2BElectronics_NA_dealCard_cc_4_NA_view-all_3&cid=YDDB3BMWGV3J"
+    },
+    {
+        img : "https://rukminim1.flixcart.com/image/400/400/ks7tuvk0/gimbal/v/z/7/0-43-om4-se-dji-original-imag5u6rgsdh6k4g.jpeg?q=70",
+        productName : "Monitor",
+        discount : "From ₹8279",
+        brand : "DELL"
+    },
+    {
+        img : "https://rukminim1.flixcart.com/image/400/400/kingqkw0-0/hair-straightener/s/v/x/hp8302-06-philips-original-imaf9jzzzurgqykt.jpeg?q=70",
+        productName : "Best of Hair straighteners",
+        discount : "From ₹8279",
+        brand : "DELL"
+    },
+    {
+        img : "https://rukminim1.flixcart.com/image/200/200/kmp7ngw0/monitor/j/z/h/s2721hn-27-py0df-dell-original-imagfjphuywuh2a7.jpeg?q=70",
+        productName : "Monitor",
+        discount : "From ₹8279",
+        brand : "DELL"
+    },
+    {
+        img : "https://rukminim1.flixcart.com/image/200/200/kmp7ngw0/monitor/j/z/h/s2721hn-27-py0df-dell-original-imagfjphuywuh2a7.jpeg?q=70",
+        productName : "Monitor",
+        discount : "From ₹8279",
+        brand : "DELL"
+    },
+]
+import { featureProductNav } from "./Data/featureProductNav.js"
+import { imageSlider } from "./Data/imageSlider.js"
+import { electronicsProductData } from "./Data/electronicProduct.js"
+
+let input_search = document.getElementById("search_input")
+let form_search = document.getElementById("search_form")
+let recent_SearchEl = document.querySelector(".recent_Search")
+
+let recentArray = ["mobile", "phone"]
+form_search.addEventListener("submit", (e) => {
+    e.preventDefault()
+    recentArray.unshift(input_search.value)
+    console.log(recentArray)
+    renderRecent()
+})
+
+
+function renderRecent() {
+    let recent_Search_html = ''
+    recentArray.forEach(el => {
+        recent_Search_html += `
+        <div class="recent_list">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <p>${el}</p>
+        </div>
+    `
+    })
+
+    recent_SearchEl.innerHTML = recent_Search_html;
+}
+renderRecent()
+
+
+/**********feature product js***********/
+let featureProduct_listEl = document.querySelector(".featureProduct_list")
+let featureProductListHTML = ''
+// console.log(featureProductNav)
+
+featureProductNav.forEach(el => {
+    featureProductListHTML += `
+        <div class="featureProduct_item">
+            <a href="${el.link}">
+                <div class="featureProduct_image">
+                    <img src="${el.img}" />
+                </div>
+                <p class="featureProduct_name">
+                    ${el.name}
+
+                  ${el.subNavigation ? `<i class="fa-solid fa-angle-down featureProduct_icon_more"></i>` : ""}   
+                </p>
+            </a>
+        </div>
+    `
+})
+featureProduct_listEl.innerHTML = featureProductListHTML
+// console.log(featureProductListHTML)
+
+
+/*******************image Slider********************* */
+let imageSliderListEl = document.querySelector(".imageSliderList")
+let imageSliderListHTML = ''
+console.log(imageSlider)
+
+
+imageSlider.forEach(el => {
+    imageSliderListHTML += `
+    <div class="imageSliderItem">
+        <a href="${el.link}">
+            <img src="${el.img}" />
+        </a>
+    </div>
+    `
+})
+imageSliderListEl.innerHTML = imageSliderListHTML;
+
+let preve_imageBtnEl = document.getElementById("preve_imageBtn")
+let next_imageBtn = document.getElementById("next_imageBtn")
+let start = 0;
+let end = -400;
+
+preve_imageBtnEl.addEventListener("click", handlePreveImage)
+next_imageBtn.addEventListener("click", handleNextImage)
+
+function handlePreveImage() {
+    let imageallList = document.querySelectorAll(".imageSliderItem")
+    console.log(imageallList)
+    if (start < 0)
+        start += 100
+    imageallList.forEach(el => {
+        el.style.transform = `translateX(${start}%)`
+    })
+
+}
+function handleNextImage() {
+    let imageallList = document.querySelectorAll(".imageSliderItem")
+    console.log(imageallList)
+    if (start > end)
+        start -= 100
+    imageallList.forEach(el => {
+        el.style.transform = `translateX(${start}%)`
+    })
+}
+
+function renderImageSlider() {
+    if (start > end) {
+        handleNextImage()
+    }
+    else {
+        start = 100
+    }
+}
+
+setInterval(renderImageSlider, 5000)
+
+
+
+/*********************************bestofElctronic_product_item */
+let bestofElctronic_product_itemEl = document.querySelector(".bestofElctronic_product_item")
+let bestofElectornicProduct_html = ""
+
+console.log(electronicsProductData)
+electronicsProductData.forEach(el => {
+
+    /* class move div to a tag */  //change done
+    
+    bestofElectornicProduct_html += `
+    <div >
+        <a href="${el.link}" class="BestofElectronic_item">   
+
+        <div class="bestOfElectornic_image_Product">
+            <img
+                src="${el.img}" />
+        </div>
+        <div class="bestofElectronicmoreOption">
+            <p class="bestofElectornicProduct_name">${el.productName}</p>
+            <p class="bestofElecronic_discount">${el.discount}</p>
+            <p class="bestofElectronic_brand">${el.brand}</p>
+        </div>
+        </a>
+
+    </div>
+    
+    `
+})
+
+bestofElctronic_product_itemEl.innerHTML = bestofElectornicProduct_html
+export const todayDeal = [
+    {
+        img : "https://m.media-amazon.com/images/I/41Diz41FkhL._AC_SY200_.jpg",
+        discount : 32,
+        DealOfDay : "Deal of the Day",
+        desc : " Grand Gaming Days offers on Bestselling Gaming Laptops & Desktops - Exchange & No Cost EMI Available"
+    },
+    {
+        img : "https://m.media-amazon.com/images/I/41DjFnGQ1FL._AC_SY200_.jpg",
+        discount : 31,
+        DealOfDay : "Deal of the Day",
+        desc : "High Performance Handpicked Desktop Computers from HP, Lenovo and more"
+    },
+    {
+        img : "https://m.media-amazon.com/images/I/31aNgbvYJKL._AC_SY200_.jpg",
+        discount : 66,
+        DealOfDay : "Deal of the Day",
+        desc : "Best Prices on boAt Headphones, Soundbars and Speakers"
+    },
+    {
+        img : "https://m.media-amazon.com/images/I/31G1NouVxaL._AC_SY200_.jpg",
+        discount : 80,
+        DealOfDay : "Deal of the Day",
+        desc : "Jaw dropping deals on headsets"
+    },
+
+    {
+        img : "https://m.media-amazon.com/images/I/31EXkIBVKUL._AC_SY200_.jpg",
+        discount : 50,
+        DealOfDay : "Deal of the Day",
+        desc : "adidas & campus Footwear"
+    },
+    {
+        img : "https://m.media-amazon.com/images/I/416x-scGWgL._AC_SY200_.jpg",
+        discount : 64,
+        DealOfDay : "Deal of the Day",
+        desc : "Grand Gaming Days Offers on Accessories and Storage Devices"
+    },
+
+    {
+        img : "https://m.media-amazon.com/images/I/31VfkewLnlL._AC_SY200_.jpg",
+        discount : 54,
+        DealOfDay : "Deal of the Day",
+        desc : "cooking essential"
+    },
+    {
+        img : "https://m.media-amazon.com/images/I/91kKqnkv9jL._AC_SY200_.jpg",
+        discount : 52,
+        DealOfDay : "Deal of the Day",
+        desc : "TOP Deals on PUMA & Skechers footwear"
+    },
+
+    {
+        img : "https://m.media-amazon.com/images/I/41fsUIG2fwL._AC_SY200_.jpg",
+        discount : 12,
+        DealOfDay : "Deal of the Day",
+        desc : "Handpicked Intel Powered Laptops; High Performance"
+    },
+    {
+        img : "https://m.media-amazon.com/images/I/317lhW5iHVL._AC_SY200_.jpg",
+        discount : 65,
+        DealOfDay : "Deal of the Day",
+        desc : "Powerbank from Mi, Ambrane, URBN and more"
+    },
+
+    {
+        img : "https://m.media-amazon.com/images/I/41yxd6A+ZAL._AC_SY200_.jpg",
+        discount : 65,
+        DealOfDay : "Deal of the Day",
+        desc : "Top deals on Truke, Govo and more"
+    },
+    {
+        img : "https://m.media-amazon.com/images/I/41wcMkODJLL._AC_SY200_.jpg",
+        discount : 75,
+        DealOfDay : "Deal of the Day",
+        desc : "Amazing deals on pTron, Jabra, Portronics"
+    },
+    {
+        img : "https://m.media-amazon.com/images/I/61QQtY6qtHL._AC_SY200_.jpg",
+        discount : 82,
+        DealOfDay : "Deal of the Day",
+        desc : "Levi's, Allen Solly, ANNI DESIGNER, Janasya & more"
+    },
+    {
+        img : "https://m.media-amazon.com/images/I/31aTPRvXiSL._AC_SY200_.jpg",
+        discount : 77,
+        DealOfDay : "Deal of the Day",
+        desc : "Exciting  deals on Mivi, Wecool, Wings"
+    },
+    {
+        img : "https://m.media-amazon.com/images/I/21wNUazPKRL._AC_SY200_.jpg",
+        discount : 20,
+        DealOfDay : "Deal of the Day",
+        desc : "Never before deals on HP printers"
+    },
+    {
+        img : "https://m.media-amazon.com/images/I/41bFnhrsyOL._AC_SY200_.jpg",
+        discount : 19,
+        DealOfDay : "Deal of the Day",
+        desc : "Vivo Y75 - 18W fast charge, FHD plus display"
+    },
+    {
+        img : "https://m.media-amazon.com/images/I/41wyFlObIrL._AC_SY200_.jpg",
+        discount : "25",
+        DealOfDay : "Deal of the Day",
+        desc : "Nokia 5710 - newly launched 4G feature phone"
+    },
+    {
+        img : "https://m.media-amazon.com/images/I/31Zq-alRH9L._AC_SY200_.jpg",
+        discount : 32,
+        DealOfDay : "Deal of the Day",
+        desc : "Vacuum Cleaners from Top Brands"
+    },
+
+
+
+]
+    </script>
+</body>
+
+
+</html>
